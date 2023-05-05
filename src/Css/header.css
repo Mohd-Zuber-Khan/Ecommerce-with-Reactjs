@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header {
+    width: 100%;
+    background: blue;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    box-sizing: border-box;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+header nav ul {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+}
+header nav ul li a {
+    padding-left: 22px;
+    text-decoration: none;
+    color: #000;
+}
+
+.count{
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 100%;
+}
