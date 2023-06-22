@@ -8,7 +8,7 @@ function Header() {
 
     const {cart} = useContext(ecommerceContext)
 
-    return (
+    return ( 
     <header>
         <h1>Ecommorce</h1>
         <nav>
@@ -30,3 +30,4 @@ function Header() {
 }
 
 export default Header
+

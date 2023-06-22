@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+ import React, { createContext, useState, useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './Header'
 import Home from './Home'
@@ -9,7 +9,15 @@ export const ecommerceContext = createContext({})
 
 function Main() {
 
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(
+        localStorage.getItem("cartItems")=== null
+        ? []
+         : JSON.parse(localStorage.getItem("cartItems"))
+    );
+
+    useEffect(() => {
+        localStorage.setItem("cartItems",JSON.stringify(cart));
+    },[cart]);
 
     return (
         <>
